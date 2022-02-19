@@ -20,12 +20,9 @@ jobs:
           submodules: recursive
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: '14.17.0'
-
-      - name: Install yarn
-        run: npm install --global yarn
+          node-version: '14.x'
 
       - name: Cache dependencies
         uses: actions/cache@v1
@@ -37,7 +34,6 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          yarn
           yarn install --frozen-lockfile
 
       - name: Build
