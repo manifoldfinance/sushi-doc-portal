@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Sushiswap Kitchen',
   tagline: 'Sushiswap',
-  url: 'https://manifoldfinance.com',
+  url: 'https://sushi.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -24,12 +24,12 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/manifoldfinance/sushi-docs/edit/master/',
+          editUrl: 'https://github.com/manifoldfinance/sushi-doc-portal/edit/master/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: 'https://github.com/manifoldfinance/sushi-docs/edit/master/',
+          editUrl: 'https://github.com/manifoldfinance/sushi-doc-portal/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -42,7 +42,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Sushis',
+        title: '🍣 Sushi',
         logo: {
           alt: 'sushi',
           src: '../static/img/sushi-avatar.png',
