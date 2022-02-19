@@ -1,0 +1,162 @@
+.developerLinksTitle {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: var(--sushi-title);
+}
+
+.developerLinksWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 28px;
+}
+
+.developerCard {
+    position: relative;
+    border: 1px solid var(--sushi-border);
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: block;
+}
+
+html[data-theme="light"] .developerCard {
+    background-color: var(--sushi-bg-card);
+    border: none;
+    box-shadow: 0 0 4px rgba(71, 73, 79, 0.1), 0 1px 2px rgba(71, 73, 79, 0.25);
+}
+
+.developerCard:hover {
+    text-decoration: none;
+}
+
+.developerCardButton {
+    position: absolute;
+    right: 24px;
+    top: 32px;
+    background: var(--sushi-common-button);
+    color: var(--sushi-common-title);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 20px 8px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.developerCardButton:hover {
+    text-decoration: none;
+    color: var(--sushi-common-title);
+    background: var(--sushi-common-button-hover);
+}
+
+.developerCardLink:hover .developerCardText {
+    color: var(--sushi-title);
+    transition: 0.2s;
+}
+
+.developerCardImage {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 24px;
+}
+
+.developerCardTitle {
+    color: var(--sushi-title);
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.developerCardText {
+    color: var(--sushi-text);
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.developerCardLink {
+    color: var(--sushi-common-button);
+    text-decoration: none;
+}
+
+.developerCardLink:hover {
+    text-decoration: none;
+}
+
+.developerCardListLink {
+    color: var(--sushi-text);
+}
+
+.developerCardListLink:hover {
+    color: var(--sushi-bg-3);
+    text-decoration: none;
+}
+
+.developerCardList {
+    padding-left: 24px;
+    margin-bottom: 0;
+}
+
+.developerCardImage {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 24px;
+}
+
+.developerCardImage::after {
+    content: '';
+    transform: scale(.5) translate(-64px, -64px);
+    width: 128px;
+    height: 128px;
+    display: block;
+}
+
+.foundationGrantProgramImage::after {
+    content: url("../../../static/img/grant-program-dark.png");
+}
+
+html[data-theme='light'] .foundationGrantProgramImage::after {
+    content: url("../../../static/img/grant-program-light.png");
+}
+
+.bugBountyImage::after {
+    content: url("../../../static/img/bug-bounty-dark.png");
+}
+
+html[data-theme='light'] .bugBountyImage::after {
+    content: url("../../../static/img/bug-bounty-light.png");
+}
+
+.smartContractsImage::after {
+    content: url("../../../static/img/smart-contracts-dark.png");
+}
+
+html[data-theme='light'] .smartContractsImage::after {
+    content: url("../../../static/img/smart-contracts-light.png");
+}
+
+.web3Image::after {
+    content: url("../../../static/img/web3-dark.png");
+}
+
+html[data-theme='light'] .web3Image::after{
+    content: url("../../../static/img/web3-light.png");
+}
+
+@media (max-width: 1200px) {
+    .developerLinksWrap {
+        grid-column-gap: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .developerLinksWrap {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 16px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .developerLinksWrap {
+        grid-template-columns: 1fr;
+    }
+}

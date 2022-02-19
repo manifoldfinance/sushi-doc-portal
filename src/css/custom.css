@@ -1,0 +1,480 @@
+:root {
+    --sushi-common-title: #FBFBFB;
+    --sushi-common-bg: rgba(108, 134, 173, 0.55);
+    --sushi-common-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25);
+    --sushi-common-button: #2F8AF5;
+    --sushi-common-button-hover: #4399ff;
+    --sushi-common-text: #222222;
+
+    --sushi-page-bg: #06070A;
+    --sushi-bg-image: rgba(255, 255, 255, 0.09);
+
+    --sushi-title: #FBFBFB;
+    --sushi-text: rgba(255, 255, 255, 0.6);
+    --sushi-text-2: #6C86AD;
+    --sushi-text-3: #FBFBFB;
+    --sushi-text-4: #FBFBFB;
+    --sushi-border: rgba(255, 255, 255, 0.25);
+    --sushi-bg-1: #000000;
+    --sushi-bg-2: #202835;
+    --sushi-bg-3: #FBFBFB;
+    --sushi-bg-4: rgba(6, 10, 16, 0.5);
+    --sushi-bg-5: #202835;
+    --sushi-bg-6: rgba(255, 255, 255, 0.09);
+    --sushi-bg-card: #FFFFFF;
+    --sushi-bg-header: #06070A;
+    --sushi-bg-toggle: #202835;
+    --sushi-shadow-1: 0 0 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25);
+    --sushi-shadow-2: none;
+    --sushi-text-2-hover: #FBFBFB;
+}
+
+:root[data-theme='light'] {
+    --sushi-page-bg: #f3f5fa;
+    --sushi-text: #222222;
+    --sushi-text-2: #6C86AD;
+    --sushi-text-3: #2F8AF5;
+    --sushi-text-4: #6C86AD;
+    --sushi-bg-image: rgba(108, 134, 173, 0.12);
+    --sushi-title: #1c1e21;
+    --sushi-border: rgba(0, 0, 0, 0.24);
+    --sushi-bg-1: #FFFFFF;
+    --sushi-bg-2: #FFFFFF;
+    --sushi-bg-3: #06070A;
+    --sushi-bg-4: #ECF0F9;
+    --sushi-bg-5: #FFFFFF;
+    --sushi-bg-6: #ECF0F9;
+    --sushi-bg-header: #FFFFFF;
+    --sushi-bg-toggle: #ECF0F9;
+    --sushi-shadow-1: 0 0 4px rgba(71, 73, 79, 0.05), 0 1px 2px rgba(71, 73, 79, 0.05);
+    --sushi-shadow-2: 0 0 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25);
+    --sushi-text-2-hover: #222222;
+}
+
+/*--Article color--*/
+:root {
+    --ifm-font-color-base: var(--sushi-title) !important;
+    --ifm-color-content-secondary: var(--sushi-text-2) !important;
+    --ifm-menu-color: var(--sushi-text-2) !important;
+    --ifm-toc-link-color: var(--sushi-text-2) !important;
+    --ifm-tabs-color: var(--sushi-title) !important;
+    --ifm-hr-border-color: var(--sushi-border) !important;
+    --ifm-toc-border-color: var(--sushi-border) !important;
+    --ifm-color-emphasis-300: var(--sushi-border) !important;
+    --ifm-color-primary: var(--sushi-common-button) !important;
+    --ifm-table-stripe-background: rgba(47, 138, 245, 0.1) !important;
+}
+
+
+/* inter-100 - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: local('../../static/fonts/inter-v7-latin-100.woff2') format('woff2'),
+         url('../../static/fonts/inter-v7-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../../static/fonts/inter-v7-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-300 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('../../static/fonts/inter-v7-latin-300.woff2') format('woff2'),
+         url('../../static/fonts/inter-v7-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../../static/fonts/inter-v7-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-regular - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('../../static/fonts/inter-v7-latin-regular.woff2') format('woff2'),
+         url('../../static/fonts/inter-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../../static/fonts/inter-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-700 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('../../static/fonts/inter-v7-latin-700.woff2') format('woff2'),
+         url('../../static/fonts/inter-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../../static/fonts/inter-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* Switch images to match the theme color */
+[data-theme-mode='dark'], [data-theme-mode='light'] {
+    display: none;
+}
+
+html[data-theme='dark'] [data-theme-mode='dark'] {
+    display: block;
+}
+
+html[data-theme='light'] [data-theme-mode='light'] {
+    display: block;
+}
+/* */
+
+p, a, h1, h2, h3 {
+    margin: 0;
+    text-decoration: none;
+}
+
+html {
+    background: var(--sushi-page-bg);
+}
+
+.main-wrapper:not(.docs-wrapper) {
+    color: var(--sushi-text);
+    font-family: 'Inter', sans-serif;
+}
+
+.main-wrapper:not(.docs-wrapper) h1,
+.main-wrapper:not(.docs-wrapper) h2,
+.main-wrapper:not(.docs-wrapper) h3 {
+    color: var(--sushi-title);
+}
+
+.page-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* header START */
+.navbar {
+    background: var(--sushi-bg-header);
+    box-shadow: none;
+    border-bottom: 1px solid var(--sushi-border);
+}
+
+.navbar__title {
+    font-size: 24px;
+}
+
+.navbar__brand {
+    margin-right: 48px;
+}
+
+.navbar-sidebar__brand {
+    box-shadow: none;
+    border-bottom: 1px solid var(--sushi-border);
+}
+
+.navbar__item {
+    padding: 0;
+    margin-right: 32px;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__link {
+    color: var(--sushi-text);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.navbar__item:hover .navbar__link {
+    color: var(--sushi-title);
+}
+
+.navbar__link:hover {
+    color: var(--sushi-text-3);
+}
+
+.navbar__item.navbar__link {
+    position: relative;
+    padding-right: 14px;
+}
+
+.navbar__item.navbar__link::after,
+.menu__link::after {
+    content: "\2197";
+    height: 17px;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+}
+
+.navbar__item.navbar__link svg,
+.menu__link svg {
+    display: none;
+}
+
+.menu__link {
+    display: inline-block;
+    width: 100%;
+}
+
+.menu__list-item--collapsed .menu__link,
+.menu__link--sublist.menu__link {
+    display: block;
+}
+
+.menu__list-item--collapsed .menu__link::after,
+.menu__link--sublist.menu__link::after,
+.menu__link--sublist ~ .menu__list .menu__link::after {
+    content: "";
+}
+
+.dropdown__menu {
+    background: var(--sushi-bg-5);
+    padding: 16px 0;
+    border-radius: 16px;
+    min-width: 156px;
+    box-shadow: var(--sushi-common-shadow);
+    margin-bottom: 0 !important;
+    top: 100%;
+}
+
+.dropdown__link {
+    font-size: 16px;
+    color: var(--sushi-text);
+    transition: .2s;
+    padding: 8px 16px;
+    border-radius: 0;
+    margin-top: 0;
+}
+
+.dropdown__link:hover {
+    background: var(--sushi-bg-4);
+}
+
+.dropdown > .navbar__link:after {
+    content: url("../../static/img/icons/chevron-dark.svg");
+    border: none;
+    transform: none;
+    color: currentColor;
+    fill: currentColor;
+    top: 3px;
+}
+
+html[data-theme='dark'] .dropdown > .navbar__link:after {
+    content: url("../../static/img/icons/chevron-light.svg");
+    opacity: 0.6;
+}
+
+.navbar__item.dropdown:hover .navbar__link:after {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.navbar-sidebar {
+    background: var(--sushi-bg-1);
+}
+
+.theme-doc-sidebar-menu .menu__link::after {
+    right: 10px;
+    top: 6px;
+}
+
+    /* header END */
+
+.fileDownload_src-components-file-download-FileDownload-module {
+    border-color: var(--sushi-border) !important;
+    align-items: center !important;
+}
+
+/* swagger START */
+.warning-swagger {
+    display: none;
+}
+
+.swagger-ui pre.version {
+    background-color: transparent !important;
+}
+
+.swagger-ui .info .title {
+    color: var(--sushi-title) !important;
+}
+
+.swagger-ui .info h1, .swagger-ui .info h2, .swagger-ui .info h3, .swagger-ui .info h4, .swagger-ui .info h5 {
+    color: var(--sushi-title) !important;
+}
+
+.swagger-ui .border-box, .swagger-ui a, .swagger-ui article, .swagger-ui body, .swagger-ui code, .swagger-ui dd,
+.swagger-ui div, .swagger-ui dl, .swagger-ui dt, .swagger-ui fieldset, .swagger-ui footer, .swagger-ui form,
+.swagger-ui h1, .swagger-ui h2, .swagger-ui h3, .swagger-ui h4, .swagger-ui h5, .swagger-ui h6, .swagger-ui header,
+.swagger-ui html, .swagger-ui input[type=email], .swagger-ui input[type=number], .swagger-ui input[type=password],
+.swagger-ui input[type=tel], .swagger-ui input[type=text], .swagger-ui input[type=url], .swagger-ui legend,
+.swagger-ui li, .swagger-ui main, .swagger-ui ol, .swagger-ui p, .swagger-ui pre, .swagger-ui section, .swagger-ui table,
+.swagger-ui td, .swagger-ui textarea, .swagger-ui th, .swagger-ui tr, .swagger-ui ul {
+    color: var(--sushi-title) !important;
+}
+
+.arrow, button {
+    fill: var(--sushi-bg-3);
+}
+
+.models-control:hover {
+    text-decoration: none;
+}
+
+.swagger-ui .model-title {
+    color: var(--sushi-title) !important;
+}
+
+.model-box-control, .model-box {
+    color: var(--sushi-title) !important;
+}
+
+html[data-theme='dark'] .swagger-ui .model-toggle:after {
+    filter: invert(100%);
+}
+
+.model-box-control:focus {
+    outline: none !important;
+}
+
+.opblock-summary-control:focus {
+    outline: none !important;
+}
+
+.models-control:focus {
+    outline: none !important;
+}
+
+.swagger-ui table.model tbody tr td:first-of-type {
+    padding: 16px !important;
+}
+
+.swagger-ui .prop-type {
+    padding: 8px;
+}
+
+.model {
+    border-radius: 16px;
+}
+
+.renderedMarkdown {
+    padding-left: 8px;
+}
+
+.swagger-ui .model .property.primitive {
+    padding-left: 8px !important;
+}
+
+.swagger-ui button,
+.swagger-ui select {
+    fill: var(--sushi-bg-3) !important;
+}
+
+.swagger-ui .opblock .opblock-section-header {
+    background-color: var(--sushi-bg-2) !important;
+}
+
+.swagger-ui .btn {
+    color: var(--sushi-text) !important;
+}
+
+.swagger-ui .opblock-body pre.microlight {
+    background: var(--sushi-common-bg) !important;
+}
+
+.swagger-ui .opblock-tag {
+    padding-right: 0 !important;
+}
+
+.swagger-ui input[disabled], .swagger-ui select[disabled], .swagger-ui textarea[disabled],
+.swagger-ui .parameters-col_description input[type=text] {
+    background: var(--sushi-bg-4) !important;
+    border-color: var(--sushi-border) !important;
+}
+
+.swagger-ui table tbody tr td,
+.swagger-ui table thead tr td,
+.swagger-ui table thead tr th {
+    padding: 10px 6px !important;
+}
+
+.swagger-ui .btn {
+    color: var(--sushi-title) !important;
+}
+
+.swagger-ui .btn:not(.cancel) {
+    border-color: var(--sushi-border) !important;
+}
+
+.swagger-ui .btn.execute {
+    background: var(--sushi-common-button) !important;
+    color: var(--sushi-common-title) !important;
+    border: none;
+}
+/* swagger END */
+
+/* Adaptive START */
+@media (max-width: 1247px) {
+    .navbar__item {
+        margin-right: 40px;
+    }
+
+    .navbar__brand {
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .page-container {
+        margin: 0 20px;
+    }
+
+    .navbar__item {
+        margin-right: 30px;
+    }
+
+    .navbar__brand {
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 1140px) {
+    .navbar__item {
+        margin-right: 20px;
+    }
+
+    .navbar__brand {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .navbar__brand {
+        margin-right: 10px;
+    }
+
+    .navbar__link {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 997px) {
+    .navbar__title {
+        font-size: 18px;
+    }
+
+   .navbar__item {
+       display: none;
+   }
+}
+
+@media (max-width: 600px) {
+    .tabs-container {
+        display: none;
+    }
+
+    .warning-swagger {
+        display: block;
+        text-align: center;
+        border: 1px solid var(--sushi-border);
+        border-radius: 16px;
+        padding: 16px;
+    }
+}
+/* Adaptive END */

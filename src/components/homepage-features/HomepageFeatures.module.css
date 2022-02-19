@@ -1,0 +1,192 @@
+.featureListTitle {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: var(--sushi-title);
+}
+
+.featureList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 28px;
+}
+
+.featureCard {
+    border: 1px solid var(--sushi-border);
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(100px);
+}
+
+html[data-theme='light'] .featureCard {
+    background-color: var(--sushi-bg-card);
+    border: none;
+    box-shadow: 0 0 4px rgba(71, 73, 79, 0.1), 0 1px 2px rgba(71, 73, 79, 0.25);
+    margin-bottom: 20px;
+}
+
+.featureCard:hover {
+    text-decoration: none;
+}
+
+.featureCardTitle {
+    color: var(--sushi-title);
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.featureCardGithubLink {
+    display: contents;
+    color: var(--sushi-text);
+}
+
+.featureCardGithubLink:hover {
+    color: var(--sushi-bg-3)
+}
+
+.featureCardText {
+    margin-bottom: 16px;
+}
+
+.featureCardImage {
+    display: block;
+    margin: 0 auto 24px;
+    width: 319px;
+    height: 172px;
+}
+
+.featureCardImage::after {
+    content: '';
+    display: block;
+    width: 319px;
+    height: 172px;
+    transform: scale(0.5) translate(-160px, -86px);
+}
+
+.onsenImage::after {
+    content: url("../../../static/img/partyonsen.png");
+}
+
+html[data-theme='light'] .onsenImage::after {
+    content: url("../../../static/img/partyonsen.png");
+}
+
+.sushipartyImage::after {
+    content: url("../../../static/img/miso-logo.png");
+}
+
+html[data-theme='light'] .sushipartyImage::after {
+    content: url("../../../static/img/miso-logo.png");
+}
+
+.sushipartyImage::after {
+    content: url("../../../static/img/miso-logo.png");
+}
+
+html[data-theme='light'] .sushipartyImage::after {
+    content: url("../../../static/img/miso-logo.png");
+}
+
+.spotPriceAggregatorImage::after {
+    content: url("../../../static/img/bentobox/bentoparty.png");
+}
+
+html[data-theme='light'] .spotPriceAggregatorImage::after {
+    content: url("../../../static/img/bentobox/bentoparty.png");
+}
+
+
+.featureCardLinkWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 4px;
+}
+
+.featureCardLinkTitle {
+    position: relative;
+}
+
+.featureCardLinkSwagger {
+    position: absolute;
+    left: calc(100% + 4px);
+    font-size: 10px;
+    line-height: 10px;
+    padding: 3px 6px;
+    border-radius: 8px;
+    font-weight: 500;
+    background: var(--sushi-bg-6);
+}
+
+.featureCardLinkWrap {
+    color: var(--sushi-text);
+}
+
+.featureCardLinkWrap:last-child {
+    margin-bottom: 0;
+}
+
+.featureCardLinkWrap:hover {
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+    color: var(--sushi-text-3);
+}
+
+.featureCardLinkWrap:hover .featureCardLinkSwagger {
+    background: #85eb2b;
+    color: var(--sushi-common-text);
+    transition: .2s;
+}
+
+.featureCardLinkIcon {
+    color: var(--sushi-common-bg);
+}
+
+.featureCardLinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 28px;
+}
+
+@media (max-width: 1200px) {
+    .featureList {
+        grid-gap: 16px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .featureList {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 16px;
+    }
+}
+
+@media (max-width: 780px) {
+    .featureList {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .featureCardLinks {
+        grid-template-columns: 1fr;
+    }
+
+    .featureCardImage {
+        width: 240px;
+        height: 130px;
+    }
+
+    .featureCardImage::after {
+        width: 240px;
+        height: 130px;
+        transform: scale(0.4) translate(-210px, -100px);;
+    }
+}
