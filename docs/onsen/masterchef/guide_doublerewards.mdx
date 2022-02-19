@@ -1,0 +1,88 @@
+---
+sidebar_position: 2
+---
+
+# Double Rewards: A Developer's Guide - Dev Hub
+
+In a dependent implementation of the rewarder contract, the additional rewards a
+project can offer are dependent on the amount of $SUSHI that is allocated to
+their pool (15:20: Keno describes the example simple contract). This means that
+projects using dependent rewarder contracts must have an allocation of $SUSHI
+given, or else their additional liquidity mining rewards will invariably be 0.
+That said, the dependent implementation of the rewarder contract is much
+simpler, less time consuming to develop, and cheaper for the end user. So, the
+dependent rewarder contract may be ideal for projects that know in advance they
+will be receiving an allocation of $SUSHI incentives.
+
+Dependent rewarder contracts are specified by setting a rewardMultiplier (15:51
+Keno describes the rewardMultiplier). The rewardMultiplier is equal to the
+amount the partner project would like their rewardToken to be dispersed relative
+to the $SUSHI rewards in their pool. In the simplest case, this multiplier would
+be 1, which would entail 1:1 $SUSHI:rewardToken rewards. The rewardToken balance
+is dispersed in addition to the $SUSHI already being given out. Therefore, in a
+dependent implementation of a rewarder contract, the project in question simply
+needs to keep an artificial balance of the rewardToken in MCV2, that is
+calculated and dispersed to the user through the rewarder interface.
+
+---
+
+In a dependent implementation of the rewarder contract, the additional rewards a
+project can offer are dependent on the amount of $SUSHI that is allocated to
+their pool (15:20: Keno describes the example simple contract). This means that
+projects using dependent rewarder contracts must have an allocation of $SUSHI
+given, or else their additional liquidity mining rewards will invariably be 0.
+That said, the dependent implementation of the rewarder contract is much
+simpler, less time consuming to develop, and cheaper for the end user. So, the
+dependent rewarder contract may be ideal for projects that know in advance they
+will be receiving an allocation of $SUSHI incentives. Dependent rewarder
+contracts are specified by setting a rewardMultiplier (15:51 Keno describes the
+rewardMultiplier). The rewardMultiplier is equal to the amount the partner
+project would like their rewardToken to be dispersed relative to the $SUSHI
+rewards in their pool. In the simplest case, this multiplier would be 1, which
+would entail 1:1 $SUSHI:rewardToken rewards. The rewardToken balance is
+dispersed in addition to the $SUSHI already being given out. Therefore, in a
+dependent implementation of a rewarder contract, the project in question simply
+needs to keep an artificial balance of the rewardToken in MCV2, that is
+calculated and dispersed to the user through the rewarder interface.
+
+### Independent (Complex)
+
+An independent implementation of the rewarder contract is more customizable, but
+it is more difficult and more expensive for the end user, because it attaches
+more storage slots. The idea behind the independent rewarder contract is that it
+allows projects to distribute rewards at a rate that is determined by an
+independent variable (time-based logic or block-based logic), and the number of
+SLP tokens the user has (17:42: Keno describes the types of logic available for
+complex rewarders). The developer can use any baseline to calculate the reward
+multiplier independent of their $SUSHI allocation. Projects using the
+independent rewarder can add rewards to a SushiSwap pool without having any
+allocation of $SUSHI at all. The following values are passed through the
+rewarder contract to determine the calculations for the user’s rewards: the pool
+ID, the user’s address, the recipient’s address, the pending $SUSHI amount, and
+the new amount of LP tokens the user has after the event in question. In the
+example complex rewarder given in the first paragraph, a hybrid model is used to
+key into some of the storage advantages of MCV2, which allows for onSushiRewards
+to track any changes and harvest at the same time, which lowers the overhead
+accounting costs to a degree (18:36: Keno describes the hybrid model used).
+
+### Getting Your Contract Whitelisted
+
+After the status of the allocations for a project has been confirmed by the
+SushiSwap team, you can get started. If you need the pool id on MasterChefV2, we
+can provide you with it in advance.
+
+#### Dependent/Simple Rewarder
+
+1. Select the reward token multiplier indicating how many tokens are given out
+   per sushi token earned, the reward token and MasterChefV2.
+2. Edit the Name to reflect your project e.g. SampleProjectRewarder.
+3. Deploy the rewarder and provide the SushiSwap team with the Rewarder address
+4. Fund the Rewarder by sending the tokens selected in step 1 to the contract.
+
+#### Independent/Complex Rewarder
+
+1. Select tokens distributed per block, the reward token and MasterChefV2.
+2. Edit the Name to reflect your project e.g. SampleProjectRewarder.
+3. Deploy the ComplexRewarder and provide the SushiSwap team with the Rewarder
+   address.
+4. Fund the Rewarder by sending the tokens selected in step 1 to the contract.

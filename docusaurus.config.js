@@ -29,8 +29,7 @@ const config = {
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/manifoldfinance/sushi-docs/edit/master/',
+          editUrl: 'https://github.com/manifoldfinance/sushi-docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -62,10 +61,10 @@ const config = {
                 href: '#',
               },
               {
-                label: 'Spot Price Aggregator',
-                href: '#',
-              }
-            ]
+                label: 'MasterChef v2',
+                href: '/docs/onsen/masterchef/masterchef2',
+              },
+            ],
           },
           {
             label: 'Protocols',
@@ -77,7 +76,7 @@ const config = {
               },
               {
                 label: 'MasterChef V2',
-                href: '#',
+                href: '/docs/onsen/masterchef/introduction',
               },
               {
                 label: 'Trident',
@@ -85,7 +84,7 @@ const config = {
               },
               {
                 label: 'Bentobox v1',
-                href: '#',
+                href: '/docs/bentobox/concepts',
               },
               {
                 label: 'Miso v1',
@@ -93,21 +92,16 @@ const config = {
               },
             ],
           },
-            {
-              label: 'Metrics',
-              position: 'left',
-              type: 'doc',
-              docId: 'governance/overview',
-            },
+
           {
             label: 'Incentive Programs',
             position: 'right',
-            href: '#'
+            href: '#',
           },
           {
             label: 'Deploy Strategy',
             position: 'right',
-            href: '#'
+            href: '#',
           },
           {
             href: 'https://www.npmjs.com/search?q=%40sushiswap',
