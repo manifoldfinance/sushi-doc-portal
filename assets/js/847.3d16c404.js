@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_sushiswap_kitchen_docs=self.webpackChunk_sushiswap_kitchen_docs||[]).push([[847],{8847:(s,c,e)=>{e.r(c)}}]);
