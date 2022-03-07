@@ -4,3 +4,6 @@
 *.xml
 *.scss
 *.min.js
+.docusarus/
+.cache/
+

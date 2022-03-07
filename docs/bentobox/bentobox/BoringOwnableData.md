@@ -1,10 +1,1 @@
 ## `BoringOwnableData`
-
-
-
-
-
-
-
-
-

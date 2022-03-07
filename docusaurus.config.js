@@ -15,7 +15,6 @@ const config = {
   favicon: 'img/favicon/favicon.ico',
   organizationName: 'sushiswap', // Usually your GitHub org/user name.
   projectName: 'sushi-docs', // Usually your repo name.
-  themes: ['docusaurus-theme-search-typesense'],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -24,12 +23,14 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/manifoldfinance/sushi-doc-portal/edit/master/',
+          editUrl:
+            'https://github.com/manifoldfinance/sushi-doc-portal/edit/master/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: 'https://github.com/manifoldfinance/sushi-doc-portal/edit/master/',
+          editUrl:
+            'https://github.com/manifoldfinance/sushi-doc-portal/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -43,10 +44,7 @@ const config = {
     ({
       navbar: {
         title: '🍣 Sushi',
-        logo: {
-          alt: 'sushi',
-          src: '../static/img/sushi-avatar.png',
-        },
+
         items: [
           {
             label: 'Guidebook',
@@ -71,11 +69,11 @@ const config = {
             position: 'left',
             items: [
               {
-                label: 'Sushiswap V1',
+                label: 'Sushiswap',
                 href: '#',
               },
               {
-                label: 'MasterChef V2',
+                label: 'MasterChef',
                 href: '/docs/onsen/masterchef/introduction',
               },
               {
@@ -83,11 +81,11 @@ const config = {
                 href: '#',
               },
               {
-                label: 'Bentobox v1',
+                label: 'BentoVault',
                 href: '/docs/bentobox/concepts',
               },
               {
-                label: 'Miso v1',
+                label: 'Miso Launchpad',
                 href: '#',
               },
             ],
