@@ -2,8 +2,9 @@
 
 > a knowledgebase and developer documentation portal for Sushiswap
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern
-static website generator.
+[![Deploy](https://github.com/manifoldfinance/sushi-doc-portal/actions/workflows/deploy.yaml/badge.svg)](https://github.com/manifoldfinance/sushi-doc-portal/actions/workflows/deploy.yaml)
+
+
 
 ### Installation
 
