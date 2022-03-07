@@ -10,10 +10,10 @@ const config = {
   tagline: 'Sushiswap',
   url: 'https://sushi.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon/favicon.ico',
-  organizationName: 'sushi', // Usually your GitHub org/user name.
+  organizationName: 'sushiswap', // Usually your GitHub org/user name.
   projectName: 'sushi-docs', // Usually your repo name.
   themes: ['docusaurus-theme-search-typesense'],
   presets: [
@@ -115,32 +115,17 @@ const config = {
           },
         ],
       },
-      typesense: {
-        typesenseCollectionName: 'sushi-docs',
-        typesenseServerConfig: {
-          nearestNode: {
-            host: 'fsn-typesense.manifoldfinance.com',
-            port: 443,
-            protocol: 'https',
-          },
-          nodes: [
-            {
-              host: 'fsn-typesense.manifoldfinance.com',
-              port: 443,
-              protocol: 'https',
-            },
-            {
-              host: 'hel-typesense.manifoldfinance.com',
-              port: 443,
-              protocol: 'https',
-            },
-          ],
-          apiKey: 'PkWe6bmCzamVA4lw1Z5ZmRjdG0BQ7Cvh',
-        },
-
-        typesenseSearchParameters: {},
-
-        contextualSearch: false,
+      algolia: {
+        apiKey: 'b6b058ad8567fd68f16ec803fefef589',
+        indexName: 'sushiswap',
+        // Optional: see doc section below
+        contextualSearch: true,
+        // Optional: see doc section below
+        appId: 'XOPRM3IJU6',
+        // Optional: Algolia search parameters
+        searchParameters: {},
+        facetFilters: [],
+        //... other Algolia params
       },
       prism: {
         theme: lightCodeTheme,
