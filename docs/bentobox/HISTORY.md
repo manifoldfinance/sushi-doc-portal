@@ -12,7 +12,9 @@
 
 ## Pre-migration
 
-Incentivised pools for Uniswap LP tokens were added by Master Chef to encourage locking liquidity into the platform before eventual migration of those Uniswap LP tokens to SushiSwap SLP tokens.
+Incentivised pools for Uniswap LP tokens were added by Master Chef to encourage
+locking liquidity into the platform before eventual migration of those Uniswap
+LP tokens to SushiSwap SLP tokens.
 
 ## Migration
 

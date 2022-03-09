@@ -1,0 +1,262 @@
+### Overview
+
+- Lending and borrowing use overcollaterization.
+- Kashi allows anyone to lend and take loans without the need for third party
+  (other than bots).
+- It is gas efficient and generate double yield thanks
+  to [BentoBox](https://www.notion.so/What-is-Bentobox-9bfc54d8f79347bdbe7552d673868a95).
+- Isolated markets allowing permissionless listing of assets and collaterals.
+- Elastic interest rates targeting 70-80% utilization.
+- Allows you to lend, borrow and leverage easily.
+
+### **Table of content**
+
+- Introduction to lending and borrowing in DeFi
+- What is Kashi?
+- How is Kashi different from other lending platforms?
+- How to lend on Kashi
+- How to borrow on Kashi
+- How to leverage on Kashi
+- How to repay on Kashi
+- FAQ
+
+## **Lending and borrowing in DeFi**
+
+If you are new to DeFi,you may wonder how can people lend and ensure that they
+will get their assets back?
+
+Most lending protocols in DeFi use the same system: overcollateralized loans.
+
+This means that borrowers need to lock a collateral in the system to be able to
+borrow, this collateral needs to have a value superior than the loan.
+
+For example, Alice can borrow 100$ of USDC if she locks 150$ of ETH in the
+protocol. Then if the collateral value of Alice falls under the value of her
+loan, her collateral will be sold against the asset she borrowed and the lender
+will be repaid by the protocol. This is called liquidation.
+
+So if we take our previous example: if ETH collateral value drops close to
+100$, the protocol will sell it to repay the user that lent 100$ of USDC to
+Alice.
+
+Usually the liquidation happens way before the collateral value goes under the
+loan value, usually 80% is the maximum, we call it LTV _(loan to value.)_ This
+means that if the loan value if over 80% of the collateral value, collateral
+will be liquidated.
+
+This liquidations are called in by liquidation bots that monitor the protocol
+earning a small fee when they do.
+
+![https://i.imgur.com/zskJsKg.png](https://i.imgur.com/zskJsKg.png)
+
+This systems allows anyone to borrow and lend from anywhere in the world,
+without the need for third party (other than bots), everything working thanks to
+smart contracts.
+
+## **What is Kashi?**
+
+Kashi is a lending and margin trading platform, built on
+the [BentoBox](https://www.notion.so/What-is-BentoBox-7e640bbaf82f44d0949fa7f0bc1beec7),
+that allows for anyone to create customized and gas-efficient markets for
+lending, borrowing, and collateralizing a variety of DeFi tokens, stable coins,
+and synthetic assets. Kashi’s broad diversity of tokens is supported through the
+use of a unique isolated market framework. Unlike traditional DeFi money markets
+where high-risk assets can introduce risk to the entire protocol, in Kashi, each
+market is entirely separate (similar to the Sushiswap DEX), meaning the risk of
+assets within one lending market has no effect over the risk of another lending
+market.
+
+Traditional lending projects have permitted users to add liquidity into a
+pool-based system. In these systems, if one of the assets were to drop in price
+faster than liquidators could react, every user and every asset would be
+negatively impacted. In this sense, the total risk of pool-based platforms
+determined largely by the riskiest asset listed on the platform. This risk
+increases with every extra asset that is added, leading to a very limited choice
+in assets on most platforms. Kashi’s unique design enables a new kind of lending
+and borrowing. The ability to isolate risks into individual lending markets
+means that Kashi can permit users to add any token.
+
+In addition, Kashi and SushiSwap together enables users to achieve leverage in
+one click, without ever leaving the platform. Users can borrow an asset and swap
+it instanlty against more collateral, thus leveraging a long on the collateral.
+
+## **How is Kashi different from other lending platforms?**
+
+The main difference is that Kashi uses lending markets, and isolated risk
+markets, while other lending platforms both calculate risks globally, such that
+the solvency of any token can affect the solvency of the whole platform. One
+important consequence of using isolated risk markets is that Kashi is able to
+allow any token to be listed. Another important consequence is that an elastic
+interest rate is used to incentivize liquidity in a certain range. Yet another
+consequence of lending pairs and isolated risk markets is that
+Kashi’s [oracles](https://www.notion.so/What-is-an-oracle-b94885ed0a9a4de88a2e7261190cf8a4) need
+to be customizable to provide price feeds for infinitely many tokens.
+
+| Feature:      | Aave, Compound, and others:                      | Kashi Lending:                                         |
+| ------------- | ------------------------------------------------ | ------------------------------------------------------ |
+| Markets       | Large pool with a variety of tokens              | A market is one asset and one collateral token         |
+| Risk          | Systemic risk, each token can cripple the system | Isolated risk in each market                           |
+| Assets listed | “Company”/DAO decides if/when assets get listed  | Users can create any markets they want                 |
+| Interest rate | Fixed curve that needs manual adjustment         | Elastic interest rates responding to supply and demand |
+| Oracles       | Chosen/maintained by the “Company”/DAO           | Open to use any oracle, user decides                   |
+| Liquidations  | Profits go to the liquidator                     | Liquidity providers can get the profits                |
+
+### **How to lend on Kashi**
+
+_If you are new to Kashi, it is recommended to use a small amount and a cheap
+chain so you can afford mistakes. In this article, we will use Kashi
+on [Polygon](http://polygon.technology)._
+
+**Step 1:** Go to [https://app.sushi.com/lend](https://app.sushi.com/lend).
+
+**Step 2:** Select a pair with the asset you want to lend as well as a
+collateral you trust.
+
+<aside>
+⚠️ The collateral selection is important, if you select a collateral that can drop in price really fast, liquidation bots may not have the time to liquidate borrowers before their collateral value is under their loan value resulting in a part of your funds being loss. 
+So if you are new to DeFi, select a collateral with high market share (~top 50 marketcap).
+
+</aside>
+
+_In this example we will lend USDC on the WMATIC-USDC pair._
+
+![https://i.imgur.com/na4axD1.png](https://i.imgur.com/na4axD1.png)
+
+**Step 3:** \*\*Once you clicked on the pair, you’ll be redirected to a new
+interface, If its your first time using Kashi, you’ll have
+to [approve](https://www.notion.so/What-is-a-token-approval-decfbde1fa3443e1a96218186f662219) it.
+
+Then select wallet or bentobox depending where your USDC comes from, enter an
+amount and click on deposit.
+
+![https://i.imgur.com/4GksFL3.png](https://i.imgur.com/4GksFL3.png)
+
+![https://i.imgur.com/anzDuhK.png](https://i.imgur.com/anzDuhK.png)
+
+**Good job ! Check your wallet
+on [etherscan](https://www.notion.so/Getting-started-with-Kashi-c4593b374d67474386ecec3d1073a48e),
+you should have received KMP tokens, they reprensent your underlying liquidity
+lent. You’ll need them to get you liquidity back.** ✅
+
+### **How to borrow on Kashi ?**
+
+_If you are new to Kashi, it is recommended to use a small amount and a cheap
+chain so you can afford mistakes. In this article, we will use Kashi
+on [Polygon.](http://polygon.technology)_
+
+**Step 1:** Go to [https://app.sushi.com/borrow](https://app.sushi.com/borrow).
+
+**Step 2:** Select a pair with the collateral you have and the asset you want to
+borrow.
+
+_In this example we will use WMATIC as collateral and borrow USDC._
+
+![https://i.imgur.com/nSXshKF.png](https://i.imgur.com/nSXshKF.png)
+
+**Step 3:** Once you clicked on the pair, you’ll be redirected to a new
+interface, If its your first time using Kashi, you’ll have
+to [approve](https://www.notion.so/What-is-a-token-approval-decfbde1fa3443e1a96218186f662219) it.
+
+Then select wallet or Bentobox depending where your WMATIC comes from, enter an
+amount to add as collateral and how much you want to borrow and select wallet or
+Bentobox depending where the borrowed assets should be sent then click on
+borrow.
+
+<aside>
+⚠️ *Do not click on the multipliers nor “Swap borrowed USDC for WMATIC collateral”, it will swap the borrowed assets against more collateral. This means going long/leverage your collateral, see more in the next part : How to leverage with Kashi*
+
+</aside>
+
+<aside>
+💡 *A checkbox with “Update exchange rate from the oracle” might appear, you can check it if you want, it will slighly increase the maximum borrowable amount.*
+
+</aside>
+
+![https://i.imgur.com/omTIocW.png](https://i.imgur.com/omTIocW.png)
+
+**Good job ! Check your wallet or Bentobox depending where you sent the borrowed
+assets, they should appear there.** ✅
+
+<aside>
+⚠️ Keep the percentage under “Borrowed” below 100% (75% of your collateral value) if you don’t want to be liquidated.
+
+</aside>
+
+![https://i.imgur.com/GxlHkrJ.png](https://i.imgur.com/GxlHkrJ.png)
+
+### **How to leverage on Kashi ?**
+
+_If you are new to Kashi, it is recommended to use a small amount and a cheap
+chain so you can afford mistakes. In this article, we will use Kashi
+on [Polygon](http://polygon.technology)._
+
+**Step 1:** Go to [https://app.sushi.com/borrow](https://app.sushi.com/borrow).
+
+**Step 2:** Select a pair with the collateral you want to long and the asset you
+want to borrow (token to short).
+
+_In this example we will put WMATIC as collateral and borrow USDC._
+
+![https://i.imgur.com/nSXshKF.png](https://i.imgur.com/nSXshKF.png)
+
+**Step 3:** Once you clicked on the pair, you’ll be redirected to a new
+interface, If its your first time using Kashi, you’ll have
+to [approve](https://www.notion.so/What-is-a-token-approval-decfbde1fa3443e1a96218186f662219) it.
+
+Then select wallet or Bentobox depending where your WMATIC tokens come from,
+enter an amount to add as collateral and then select a multiplier. It will
+borrow the asset and swap it against more collateral.
+
+<aside>
+💡 *A checkbox with “Update exchange rate from the oracle” might appear, you can check it if you want, it will slighly increase the maximum borrowable amount.*
+
+</aside>
+
+![https://i.imgur.com/dFvNT4d.png](https://i.imgur.com/dFvNT4d.png)
+
+**Good job ! You are now longing your collateral and shorting the asset
+borrowed.**
+
+<aside>
+⚠️ **Keep the percentage under “Borrowed” below 100% (75% of your collateral value) if you don’t want to be liquidated.**
+
+</aside>
+
+### **How to repay on Kashi**
+
+**Step 1:** Go to [https://app.sushi.com/borrow](https://app.sushi.com/borrow).
+
+**Step 2:** Select the pair where your loan is and click on “Repay”.
+
+_In this example its WMATIC as collateral and a USDC loan._
+
+![https://i.imgur.com/1mp8oVc.png](https://i.imgur.com/1mp8oVc.png)
+
+![https://i.imgur.com/mPwMIPn.png](https://i.imgur.com/mPwMIPn.png)
+
+There is two way to repay your loan :
+
+- Repay with the asset borrowed.
+- Repay with collateral : this will sell a part of your collateral to payback
+  the loan and will send the remaining collateral balance to BentoBox.
+
+**Step 3.1:** To repay with the borrowed asset, you’ll need to have the asset in
+your wallet or in BentoBox.
+
+Enter the amount you want to repay and from where (BentoBox or wallet), enter
+the amount of collateral you want to remove and to where (BentoBox or wallet)
+then click on “repay and remove collateral”.
+
+![https://i.imgur.com/b35pLl3.png](https://i.imgur.com/b35pLl3.png)
+
+**Step 3.2:** To repay with your collateral, simply check “Swap
+collateral `COLLATERAL NAME` (WMATIC in this case) for `ASSET NAME` (USDC in
+this case) and repay" then click on “Automatic repay”
+
+![https://i.imgur.com/ngy47fU.png](https://i.imgur.com/ngy47fU.png)
+
+**Good job ! Check your wallet or Bentobox depending where you sent the
+collateral (BentoBox if used repay with collateral), tokens should appear
+there.** ✅
+
+-

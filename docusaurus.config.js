@@ -10,12 +10,11 @@ const config = {
   tagline: 'Sushiswap',
   url: 'https://sushi.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon/favicon.ico',
-  organizationName: 'sushi', // Usually your GitHub org/user name.
+  organizationName: 'sushiswap', // Usually your GitHub org/user name.
   projectName: 'sushi-docs', // Usually your repo name.
-  themes: ['docusaurus-theme-search-typesense'],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -24,12 +23,14 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/manifoldfinance/sushi-doc-portal/edit/master/',
+          editUrl:
+            'https://github.com/manifoldfinance/sushi-doc-portal/edit/master/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: 'https://github.com/manifoldfinance/sushi-doc-portal/edit/master/',
+          editUrl:
+            'https://github.com/manifoldfinance/sushi-doc-portal/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -43,10 +44,7 @@ const config = {
     ({
       navbar: {
         title: '🍣 Sushi',
-        logo: {
-          alt: 'sushi',
-          src: '../static/img/sushi-avatar.png',
-        },
+
         items: [
           {
             label: 'Guidebook',
@@ -71,11 +69,11 @@ const config = {
             position: 'left',
             items: [
               {
-                label: 'Sushiswap V1',
+                label: 'Sushiswap',
                 href: '#',
               },
               {
-                label: 'MasterChef V2',
+                label: 'MasterChef',
                 href: '/docs/onsen/masterchef/introduction',
               },
               {
@@ -83,11 +81,11 @@ const config = {
                 href: '#',
               },
               {
-                label: 'Bentobox v1',
+                label: 'BentoVault',
                 href: '/docs/bentobox/concepts',
               },
               {
-                label: 'Miso v1',
+                label: 'Miso Launchpad',
                 href: '#',
               },
             ],
@@ -115,32 +113,17 @@ const config = {
           },
         ],
       },
-      typesense: {
-        typesenseCollectionName: 'sushi-docs',
-        typesenseServerConfig: {
-          nearestNode: {
-            host: 'fsn-typesense.manifoldfinance.com',
-            port: 443,
-            protocol: 'https',
-          },
-          nodes: [
-            {
-              host: 'fsn-typesense.manifoldfinance.com',
-              port: 443,
-              protocol: 'https',
-            },
-            {
-              host: 'hel-typesense.manifoldfinance.com',
-              port: 443,
-              protocol: 'https',
-            },
-          ],
-          apiKey: 'PkWe6bmCzamVA4lw1Z5ZmRjdG0BQ7Cvh',
-        },
-
-        typesenseSearchParameters: {},
-
-        contextualSearch: false,
+      algolia: {
+        apiKey: 'b6b058ad8567fd68f16ec803fefef589',
+        indexName: 'sushiswap',
+        // Optional: see doc section below
+        contextualSearch: true,
+        // Optional: see doc section below
+        appId: 'XOPRM3IJU6',
+        // Optional: Algolia search parameters
+        searchParameters: {},
+        facetFilters: [],
+        //... other Algolia params
       },
       prism: {
         theme: lightCodeTheme,
