@@ -19,12 +19,20 @@ const config = {
     [
       '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
             'https://github.com/manifoldfinance/sushi-doc-portal/edit/master/',
+          versions: {
+            current: {
+              label: 'current',
+            },
+          },
+          lastVersion: 'current',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
@@ -35,16 +43,14 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       navbar: {
         title: '🍣 Sushi',
-
         items: [
           {
             label: 'Guidebook',
@@ -90,7 +96,6 @@ const config = {
               },
             ],
           },
-
           {
             label: 'Incentive Programs',
             position: 'right',
@@ -116,20 +121,16 @@ const config = {
       algolia: {
         apiKey: 'b6b058ad8567fd68f16ec803fefef589',
         indexName: 'sushiswap',
-        // Optional: see doc section below
         contextualSearch: true,
-        // Optional: see doc section below
         appId: 'XOPRM3IJU6',
-        // Optional: Algolia search parameters
         searchParameters: {},
         facetFilters: [],
-        //... other Algolia params
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    }),
+    },
 };
 
 module.exports = config;

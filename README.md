@@ -4,8 +4,6 @@
 
 [![Deploy](https://github.com/manifoldfinance/sushi-doc-portal/actions/workflows/deploy.yaml/badge.svg)](https://github.com/manifoldfinance/sushi-doc-portal/actions/workflows/deploy.yaml)
 
-
-
 ### Installation
 
 ```
