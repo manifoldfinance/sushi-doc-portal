@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_sushiswap_kitchen_docs=self.webpackChunk_sushiswap_kitchen_docs||[]).push([[4121],{8070:s=>{s.exports=JSON.parse('[{"name":"masterchef","permalink":"/docs/tags/masterchef","count":2},{"name":"sushiswap","permalink":"/docs/tags/sushiswap","count":2}]')}}]);
