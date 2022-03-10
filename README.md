@@ -3,6 +3,22 @@
 > a knowledgebase and developer documentation portal for Sushiswap
 
 [![Deploy](https://github.com/manifoldfinance/sushi-doc-portal/actions/workflows/deploy.yaml/badge.svg)](https://github.com/manifoldfinance/sushi-doc-portal/actions/workflows/deploy.yaml)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/manifoldfinance/sushi-doc-portal)
+
+## Identifiers
+
+| Id | Category         |
+|----|------------------|
+| 🔍  | note             |
+| ❌  | fatal            |
+| 🚨  | warning          |
+| 🔮  | interrogative    |
+| 🚧  | work-in-progress |
+| 🧰  | toolkit          |
+| 📖  | reading          |
+| 🎯  | metrics          |
+| 🔐  | security         |
+| 🛠  | configuration    |
 
 ### Installation
 
