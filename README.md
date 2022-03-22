@@ -7,8 +7,8 @@
 
 ## Identifiers
 
-| Id | Category         |
-|----|------------------|
+| Id  | Category         |
+| --- | ---------------- |
 | 🔍  | note             |
 | ❌  | fatal            |
 | 🚨  | warning          |
@@ -18,7 +18,7 @@
 | 📖  | reading          |
 | 🎯  | metrics          |
 | 🔐  | security         |
-| 🛠  | configuration    |
+| 🛠   | configuration    |
 
 ### Installation
 
