@@ -1,4 +1,4 @@
-# Your Favicon Package
+# Sushi Favicon Package
 
 This package was generated with
 [RealFaviconGenerator](https://realfavicongenerator.net/)
@@ -6,14 +6,8 @@ This package was generated with
 
 ## Install instructions
 
-To install this package:
 
-Extract this package in the root of your web site. If your site is
-<code>http://www.example.com</code>, you should be able to access a file named
-<code>http://www.example.com/favicon.ico</code>.
-
-Insert the following code in the `head` section of your pages:
-
+```html
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -21,6 +15,4 @@ Insert the following code in the `head` section of your pages:
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
-
-_Optional_ - Check your favicon with the
-[favicon checker](https://realfavicongenerator.net/favicon_checker)
+```
