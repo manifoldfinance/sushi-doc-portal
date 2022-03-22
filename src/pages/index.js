@@ -26,7 +26,7 @@ export default function Home() {
         <title>Sushi | Knowledgebase</title>
         <meta property="og:title" content="Sushi | Knowledgebase" />
         <meta property="og:description" content="Be a DeFi Chef with Sushi." />
-        <meta property="og:url" content="https://docs.manifoldfinance.com/" />
+        <meta property="og:url" content="https://docs.sushiguard.com/" />
         <meta property="og:image" content="" />
         <meta property="og:site_name" content="Sushiswap Documentation" />
         <meta property="og:type" content="website" />
