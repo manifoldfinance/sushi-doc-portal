@@ -6,22 +6,11 @@ on:
       - master
       - trunk
     paths-ignore:
-      - .github/**
+      - .scripts/**
   # manual trigger
   workflow_dispatch:
 
 jobs:
-  # Wait for up to a minute for previous run to complete, abort if not done by then
-  pre-run:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - name: 'Block Concurrent Executions'
-        uses: softprops/turnstyle@v1
-        with:
-          poll-interval-seconds: 10
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   bump_version:
     name: Bump Version
@@ -32,7 +21,7 @@ jobs:
       changelog: ${{ steps.github_tag_action.outputs.changelog }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Bump version and push tag
         id: github_tag_action
@@ -64,24 +53,21 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-
-
       - name: Install Dependencies
         run: |
           yarn install
-
       - name: Build
         run: |
           yarn run build
-
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+        uses: JamesIves/github-pages-deploy-action@4
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: build # The folder the action should deploy.
 
       - name: Create GitHub Release
         id: create_release
-        uses: actions/create-release@v1.1.0
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -89,3 +75,14 @@ jobs:
           release_name: Release ${{ needs.bump_version.outputs.new_tag }}
           body: |
             New version ${{ needs.bump_version.outputs.new_tag }}
+
+      - run: for f in `ls -d build/ | xargs`; do tar -cvzf ${f%/}.tar.gz $f; done
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            LICENSE.txt
+            build.tar.gz
