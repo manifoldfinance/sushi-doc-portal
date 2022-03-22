@@ -1,8 +1,8 @@
 position: 2.5 # float position is supported
-label: 'Stratagies'
+label: 'Strategies'
 collapsible: true # make the category collapsible
 collapsed: false # keep the category open by default
 className: red
 link:
   type: generated-index
-  title: Stratagies overview
+  title: Strategies overview
