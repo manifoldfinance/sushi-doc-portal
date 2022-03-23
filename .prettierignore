@@ -6,4 +6,5 @@
 *.min.js
 .docusarus/
 .cache/
-
+build/
+.docusaurus/**/*
